@@ -29,8 +29,8 @@ const Portfolio = () => {
 <div className='flex justify-around items-center ' style={{ width: 100, height: 50 }}>
   <CircularProgressbar value={percentage} text={`${percentage}%`} />
     <span className='text-xl px-2'>HTML</span></div>
-<div className='flex justify-around items-center ' style={{ width: 100, height: 50 }}>
-  <CircularProgressbar value={percentage} text={`${percentage}%`} />
+<div className='flex justify-around items-center ' style={{ width: 80, height: 50 }}>
+  <CircularProgressbar value={percentage} text={`${percentage + 20}%`} />
     <span className='text-xl px-2'>CSS</span></div>
 
 </div>
