@@ -16,6 +16,7 @@ const Navbar = () => {
     <li><Link to="/businessSummery"> add Reviews</Link></li>
     <li><Link to="/businessSummery">Profile</Link></li>
     <li><Link to="/blog">Blogs</Link></li>
+    <li><Link to="/portfolio">Portfolio</Link></li>
 
     </>
     
