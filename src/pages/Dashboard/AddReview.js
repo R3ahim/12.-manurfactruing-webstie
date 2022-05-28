@@ -4,12 +4,15 @@ const AddReview = () => {
     return (
  
  <div class="modal-box mx-auto">
-    <h3 class="font-bold text-lg">Congratulations random Interner user!</h3>
-    <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
-    <div class="modal-action">
-     <a href="#" class="btn">Yay!</a>
+<input type="text" placeholder="Type here" class="input input-bordered input-secondary w-full max-w-xs" />
+<input type="text" placeholder="Type here" class="input input-bordered input-secondary w-full max-w-xs" />
+<select class="select select-bordered w-full max-w-xs">
+  <option disabled selected>Who shot first?</option>
+  <option>Han Solo</option>
+  <option>Greedo</option>
+</select>
+     <button className='btn btn-primary'>yea</button>
     </div>
-  </div>
 
     );
 };
