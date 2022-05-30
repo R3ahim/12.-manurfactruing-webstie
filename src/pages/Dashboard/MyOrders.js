@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useQuery } from 'react-query';
+import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading';
+
 
 const MyOrders = () => {
     const [user] = useAuthState(auth)
@@ -54,6 +56,7 @@ useEffect(()=>{
                             <th>TotalPrice</th>
                             <th>paymennt</th>
                             <th>optimagation</th>
+                        
                         </tr>
                     </thead>
                     <tbody>
@@ -65,8 +68,14 @@ useEffect(()=>{
                                 <td>{a.quantity}</td>
                                 <td>{a.price}</td>
                                 <td>{a.price * a.quantity}</td>
-                                <td><button class="btn btn-sm btn-primary">pay</button></td>
-                                <td><button onClick={()=>handleCancle(a._id)} className='btn btn-sm btn-error'>cancle</button></td>
+                                <td>
+                                    {(a.price && !a.paid) && <Link to={`/payment/${a._id}`}><button className='btn btn-xs btn-success'>pay</button></Link>}
+                                    {(a.price && a.paid) && <div>
+                                        <p><span className='text-success'>Paid</span></p>
+                                        <p>Transaction id: <span className='text-success'>{a.paid}</span></p>
+                                    </div>}
+                                </td>             
+         <td>{( !a.paid) &&<button onClick={()=>handleCancle(a._id)} className='btn btn-sm btn-error'>cancle</button>}</td>
                                 </tr>)
                         }
                         </tbody>

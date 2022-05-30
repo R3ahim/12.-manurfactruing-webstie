@@ -14,6 +14,8 @@ import Orders from './pages/Home/Orders';
 import Blog from './pages/Blog/Blog';
 import Portfolio from './pages/Porfolio/Portfolio';
 import Review from './pages/Review/Review';
+import Payment from './pages/Dashboard/Payment';
+import Footer from './pages/Shared/Footer';
 
 function App() {
   return (
@@ -34,10 +36,14 @@ function App() {
           <Route path="/dashboard/MyOrders" element={<MyOrders></MyOrders>}></Route>
           <Route path="/dashboard/addReview" element={<AddReview></AddReview>}></Route>
           <Route path="/dashboard/Myprofile" element={<MyProfile></MyProfile>}></Route>
+          <Route path="/dashboard/payment/:" element={<Payment></Payment>}></Route>
 
    </Route>
+   <Route path="/payment/:id" element={<Payment></Payment>}></Route>
+
    
    </Routes>
+   <Footer></Footer>
 
  
     </div>
